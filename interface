@@ -1,0 +1,24 @@
+package interfacedemo;
+
+public class interfacedemo {
+	
+	public static void main (String[] args) {
+		Myclass a = new Myclass();
+		a.someMethod();
+		
+		System.out.println("The value of the constant is " + MyInterface.myInt);
+	}
+}
+
+class MyClass implements MyInterface{
+	@Override
+	public void someMethod() {
+		System.out.println("This is a method implemented in MyClass");
+	}
+}
+
+interface MyInterface{
+	int myInt = 5;
+	void someMethod();
+	
+}
